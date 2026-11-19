@@ -6,8 +6,24 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2032B21D309EDBA200A2CAFC /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 2032B21C309EDBA200A2CAFC /* MLXLLM */; };
+		2032B22B309EDFD400A2CAFC /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 2032B22A309EDFD400A2CAFC /* MLXLMCommon */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2032B306309EE00000A2CAFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2032B1FA309ED5DE00A2CAFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2032B201309ED5DE00A2CAFC;
+			remoteInfo = OSKO;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2032B202309ED5DE00A2CAFC /* OSKO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSKO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2032B301309EE00000A2CAFC /* OSKOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSKOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +32,22 @@
 			path = OSKO;
 			sourceTree = "<group>";
 		};
+		2032B302309EE00000A2CAFC /* OSKOTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OSKOTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2032B1FF309ED5DE00A2CAFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				2032B22B309EDFD400A2CAFC /* MLXLMCommon in Frameworks */,
+				2032B21D309EDBA200A2CAFC /* MLXLLM in Frameworks */,
+			);
+		};
+		2032B304309EE00000A2CAFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
 			);
@@ -31,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				2032B204309ED5DE00A2CAFC /* OSKO */,
+				2032B302309EE00000A2CAFC /* OSKOTests */,
+				2032B21B309EDBA200A2CAFC /* Frameworks */,
 				2032B203309ED5DE00A2CAFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,8 +69,16 @@
 			isa = PBXGroup;
 			children = (
 				2032B202309ED5DE00A2CAFC /* OSKO.app */,
+				2032B301309EE00000A2CAFC /* OSKOTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2032B21B309EDBA200A2CAFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,9 +98,36 @@
 				2032B204309ED5DE00A2CAFC /* OSKO */,
 			);
 			name = OSKO;
+			packageProductDependencies = (
+				2032B21C309EDBA200A2CAFC /* MLXLLM */,
+				2032B22A309EDFD400A2CAFC /* MLXLMCommon */,
+			);
 			productName = OSKO;
 			productReference = 2032B202309ED5DE00A2CAFC /* OSKO.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2032B308309EE00000A2CAFC /* OSKOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2032B309309EE00000A2CAFC /* Build configuration list for PBXNativeTarget "OSKOTests" */;
+			buildPhases = (
+				2032B303309EE00000A2CAFC /* Sources */,
+				2032B304309EE00000A2CAFC /* Frameworks */,
+				2032B305309EE00000A2CAFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2032B307309EE00000A2CAFC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2032B302309EE00000A2CAFC /* OSKOTests */,
+			);
+			name = OSKOTests;
+			packageProductDependencies = (
+			);
+			productName = OSKOTests;
+			productReference = 2032B301309EE00000A2CAFC /* OSKOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -77,6 +142,10 @@
 					2032B201309ED5DE00A2CAFC = {
 						CreatedOnToolsVersion = 27.1;
 					};
+					2032B308309EE00000A2CAFC = {
+						CreatedOnToolsVersion = 27.2;
+						TestTargetID = 2032B201309ED5DE00A2CAFC;
+					};
 				};
 			};
 			buildConfigurationList = 2032B1FD309ED5DE00A2CAFC /* Build configuration list for PBXProject "OSKO" */;
@@ -88,18 +157,27 @@
 			);
 			mainGroup = 2032B1F9309ED5DD00A2CAFC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2032B211309ED73700A2CAFC /* XCRemoteSwiftPackageReference "mlx-swift-examples" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2032B203309ED5DE00A2CAFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2032B201309ED5DE00A2CAFC /* OSKO */,
+				2032B308309EE00000A2CAFC /* OSKOTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2032B200309ED5DE00A2CAFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		2032B305309EE00000A2CAFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -112,7 +190,20 @@
 			files = (
 			);
 		};
+		2032B303309EE00000A2CAFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2032B307309EE00000A2CAFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2032B201309ED5DE00A2CAFC /* OSKO */;
+			targetProxy = 2032B306309EE00000A2CAFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2032B20B309ED5E000A2CAFC /* Debug configuration for PBXProject "OSKO" */ = {
@@ -168,7 +259,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -225,7 +316,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -241,11 +332,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "OSKO uses the microphone to listen to your voice input.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "OSKO uses speech recognition to transcribe your voice input in English and Spanish.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -271,11 +363,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "OSKO uses the microphone to listen to your voice input.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "OSKO uses speech recognition to transcribe your voice input in English and Spanish.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -290,6 +383,56 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2032B30A309EE00000A2CAFC /* Debug configuration for PBXNativeTarget "OSKOTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infodev.OSKOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSKO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OSKO";
+			};
+			name = Debug;
+		};
+		2032B30B309EE00000A2CAFC /* Release configuration for PBXNativeTarget "OSKOTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infodev.OSKOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSKO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OSKO";
 			};
 			name = Release;
 		};
@@ -312,7 +455,39 @@
 			);
 			defaultConfigurationName = Release;
 		};
+		2032B309309EE00000A2CAFC /* Build configuration list for PBXNativeTarget "OSKOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2032B30A309EE00000A2CAFC /* Debug configuration for PBXNativeTarget "OSKOTests" */,
+				2032B30B309EE00000A2CAFC /* Release configuration for PBXNativeTarget "OSKOTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2032B211309ED73700A2CAFC /* XCRemoteSwiftPackageReference "mlx-swift-examples" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ml-explore/mlx-swift-examples";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.29.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2032B21C309EDBA200A2CAFC /* MLXLLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2032B211309ED73700A2CAFC /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLLM;
+		};
+		2032B22A309EDFD400A2CAFC /* MLXLMCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2032B211309ED73700A2CAFC /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLMCommon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2032B1FA309ED5DE00A2CAFC /* Project object */;
 	validationLevel = 1;
